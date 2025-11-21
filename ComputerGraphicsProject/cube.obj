@@ -1,0 +1,23 @@
+# cube (6 quads), centered at origin, side = 1
+
+v -0.5 -0.5 -0.5
+v  0.5 -0.5 -0.5
+v  0.5  0.5 -0.5
+v -0.5  0.5 -0.5
+v -0.5 -0.5  0.5
+v  0.5 -0.5  0.5
+v  0.5  0.5  0.5
+v -0.5  0.5  0.5
+
+# back  (-Z)
+f 2 1 4 3
+# front (+Z)
+f 5 6 7 8
+# left  (-X)
+f 1 5 8 4
+# right (+X)
+f 6 2 3 7
+# bottom (-Y)
+f 1 2 6 5
+# top    (+Y)
+f 4 8 7 3
