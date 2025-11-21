@@ -1,0 +1,10 @@
+#version 330 core
+layout(location = 0) in vec3 aPos;    // 위치
+layout(location = 1) in vec3 aColor;  // 색상 (VBO에서 들어옴)
+
+flat out vec3 vColor;                 // 보간 없이 그대로 전달
+
+void main() {
+    gl_Position = vec4(aPos, 1.0);    // CPU에서 이미 NDC로 변환되어 들어옴
+    vColor = aColor;                   // 색 전달(사용해야 컴파일러가 안 지움)
+}
